@@ -1,3 +1,11 @@
+<?php
+include 'connect.php';
+
+?>
+
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -37,7 +45,7 @@
                     <input type="password" class="form-control" placeholder="Enter your password" name="pwd" autocomplete="off">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
 
             </form>
         </div>
