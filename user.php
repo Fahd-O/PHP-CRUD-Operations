@@ -1,6 +1,26 @@
 <?php
 include 'connect.php';
 
+if(isset($_POST['submit']))
+{
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $mobileNumber = $_POST['mobileNumber'];
+    $password = $_POST['pwd'];
+
+    $sql = "INSERT INTO `user_data` (`name`, `email`, `mobileNumber`, `password`) VALUES ('$name', '$email', '$mobileNumber', '$password')";
+
+    $result = mysqli_query($con,$sql);
+
+    if($result)
+    {
+        echo "Data inserted successfully";
+    }
+    else
+    {
+        die(mysqli_error($con));
+    }
+}
 ?>
 
 
