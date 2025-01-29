@@ -1,3 +1,7 @@
+<?php
+    include 'connect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,18 +30,39 @@
                     <th scope="col">Email</th>
                     <th scope="col">Mobile Number</th>
                     <th scope="col">Password</th>           
+                    <th scope="col">TimeStamp</th>
                     <th scope="col">Operations</th>
                 </tr>
             </thead>
 
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
+
+                <?php
+                    $sql = "SELECT * FROM `user_data`";
+                    $result = mysqli_query($con, $sql);
+
+                    if($result)
+                    {
+                        while($row = mysqli_fetch_assoc($result)){
+                            $id = $row['id'];
+                            echo "<tr>
+                                <th scope='row'>". $id ."</th>
+                                <td>". $row['name'] ."</td>
+                                <td>". $row['email'] ."</td>
+                                <td>". $row['mobileNumber'] ."</td>
+                                <td>". $row['password'] ."</td>
+                                <td>". $row['TimeStamp'] ."</td>
+                                <td>
+                                    <button class='btn btn-primary'>Edit</button>
+                                    <button class='btn btn-danger'>Delete</button>
+                                </td>
+                            </tr>";
+                        }
+                    }
+                ?>
+
+                <!-- <tr>
+                    <t scope="row">1
                     <th scope="row">2</th>
                     <td>Jacob</td>
                     <td>Thornton</td>
@@ -48,7 +73,7 @@
                     <td>Larry</td>
                     <td>the Bird</td>
                     <td>@twitter</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
