@@ -47,22 +47,22 @@ if(isset($_POST['submit']))
 
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control" placeholder="Enter your name" name="name" autocomplete="off">
+                    <input type="text" class="form-control" placeholder="Enter your name" name="name" autocomplete="off" required>
                 </div>
                 
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control" placeholder="Enter your email" name="email" autocomplete="off">
+                    <input type="email" class="form-control" placeholder="Enter your email" name="email" autocomplete="off" required>
                 </div>
 
                 <div class="form-group">
                     <label>Mobile number</label>
-                    <input type="text" class="form-control" placeholder="Enter your mobile number" name="mobileNumber" autocomplete="off">
+                    <input type="text" class="form-control" placeholder="Enter your mobile number" name="mobileNumber" autocomplete="off" required>
                 </div>
 
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Enter your password" name="pwd" autocomplete="off">
+                    <input type="password" class="form-control" placeholder="Enter your password" name="pwd" autocomplete="off" required>
                 </div>
 
                 <button type="submit" class="btn btn-primary" name="submit">Submit</button>
