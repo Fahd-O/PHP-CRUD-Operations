@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 
     if($result)
     {
-        echo "Data inserted successfully";
+        header("location:display.php");
     }
     else
     {
