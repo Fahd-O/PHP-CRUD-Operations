@@ -53,27 +53,14 @@
                                 <td>". $row['password'] ."</td>
                                 <td>". $row['TimeStamp'] ."</td>
                                 <td>
-                                    <button class='btn btn-primary'>Edit</button>
-                                    <button class='btn btn-danger'>Delete</button>
+                                    <button class='btn btn-primary'><a href='update.php' class='text-light'>Update</a></button>
+                                    <button class='btn btn-danger'><a href='delete.php?deleteid=".$id."' class='text-light'>Delete</a></button>
                                 </td>
                             </tr>";
                         }
                     }
                 ?>
-
-                <!-- <tr>
-                    <t scope="row">1
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr> -->
+                
             </tbody>
         </table>
     </div>
