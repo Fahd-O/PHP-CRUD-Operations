@@ -2,6 +2,9 @@
 include 'connect.php';
 
 $id = $_GET['updateid'];
+$sql2 = "SELECT * FROM `user_data` WHERE id = $id";
+$result2 = mysqli_query($con, $sql2);
+$row2 = mysqli_fetch_assoc($result2);
 
 if(isset($_POST['submit']))
 {
@@ -49,22 +52,22 @@ if(isset($_POST['submit']))
 
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" class="form-control" placeholder="Enter your name" name="name" autocomplete="off" required>
+                    <input type="text" class="form-control" placeholder="Enter your name" name="name" autocomplete="off" required value="<?php echo $row2['name'];?>">
                 </div>
                 
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control" placeholder="Enter your email" name="email" autocomplete="off" required>
+                    <input type="email" class="form-control" placeholder="Enter your email" name="email" autocomplete="off" required value="<?php echo $row2['email'];?>">
                 </div>
 
                 <div class="form-group">
                     <label>Mobile number</label>
-                    <input type="text" class="form-control" placeholder="Enter your mobile number" name="mobileNumber" autocomplete="off" required>
+                    <input type="text" class="form-control" placeholder="Enter your mobile number" name="mobileNumber" autocomplete="off"  value="<?php echo $row2['mobileNumber'];?>">
                 </div>
 
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Enter your password" name="pwd" autocomplete="off" required>
+                    <input type="password" class="form-control" placeholder="Enter your password" name="pwd" autocomplete="off" required value="<?php echo $row2['password'];?>">
                 </div>
 
                 <button type="submit" class="btn btn-primary" name="submit">Update</button>
