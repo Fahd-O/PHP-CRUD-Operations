@@ -17,6 +17,8 @@
 
 <body>
 
+    <h1 style="text-align: center; padding-top: 1rem;">PHP CRUD Operations</h1>
+
     <div class="container">
         <button class="btn btn-primary my-5">
             <a href="user.php" target="_blank" rel="noopener noreferrer" class="text-light">Add User</a>
